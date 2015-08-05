@@ -1,35 +1,30 @@
 <html>
 <head>
-    <title>jQuery Events</title>
-    <link rel='stylesheet' href='day.css'>
+    <title>jQuery Events 201</title>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
 
-<h1>What time is it?</h1>
+<dl>
+  <dt>What are your hours?</dt>
+  <dd>We are open 24/7</dd>
 
-<button data-file="day">Daytime!</button>
-<button data-file="night">Nightime!</button>
+  <dt>What are your hours?</dt>
+  <dd>We are open 24/7</dd>
+
+  <dt>What are your hours?</dt>
+  <dd>We are open 24/7</dd>
+
+  <dt>What are your hours?</dt>
+  <dd>We are open 24/7</dd>
+
+  <dt>What are your hours?</dt>
+  <dd>We are open 24/7</dd>
+</dl>
 
 <script src="jquery-2.1.4.js"></script>
 
 <script>
-
-(function() {
-  var link = $('link');
-    $('button').click(function(){
-      var $this = $(this),
-          stylesheet = $(this).data('file');
-
-      link.attr('href', stylesheet + '.css');
-
-      $this
-          .siblings('button')
-              .removeAttr('disabled')
-              .end()
-              .attr('disabled', 'disabled');
-
-    });
-})();
 
 </script>
 
