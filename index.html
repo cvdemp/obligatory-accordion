@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>jQuery Events</title>
+    <link rel='stylesheet' href='day.css'>
+</head>
+<body>
+
+<h1>What time is it?</h1>
+
+<button data-file="day">Daytime!</button>
+<button data-file="night">Nightime!</button>
+
+<script src="jquery-2.1.4.js"></script>
+
+<script>
+
+(function() {
+  var link = $('link');
+    $('button').click(function(){
+      var $this = $(this),
+          stylesheet = $(this).data('file');
+
+      link.attr('href', stylesheet + '.css');
+
+      $this
+          .siblings('button')
+              .removeAttr('disabled')
+              .end()
+              .attr('disabled', 'disabled');
+
+    });
+})();
+
+</script>
+
+</body>
+</html>
